@@ -1104,23 +1104,29 @@ body {
   background-color: #d4e4e8;
 
   background-image:
-    radial-gradient(circle, #ffffff 0 11px, transparent 12px),
-    radial-gradient(circle, #ffffff 0 8px, transparent 9px),
-    radial-gradient(circle, #ffffff 0 13px, transparent 14px);
+    radial-gradient(circle, #fff 0 11px, transparent 12px),
+    radial-gradient(circle, #fff 0 8px, transparent 9px),
+    radial-gradient(circle, #fff 0 10px, transparent 11px),
+    radial-gradient(circle, #fff 0 7px, transparent 8px),
+    radial-gradient(circle, #fff 0 9px, transparent 10px);
 
-  /* 距離拉大 */
+  /* 一個手機畫面約 5 顆 */
   background-size:
-    420px 600px,
-    500px 720px,
-    460px 800px;
+    100% 750px,
+    100% 750px,
+    100% 750px,
+    100% 750px,
+    100% 750px;
 
-  /* 分散位置 */
+  /* 往裡面移，避免只露半顆 */
   background-position:
-    35px 70px,
-    250px 300px,
-    100px 520px;
+    10% 70px,
+    86% 170px,
+    15% 360px,
+    82% 520px,
+    48% 680px;
 
-  background-attachment: scroll;
+  background-repeat: repeat-y;
 }
 
 .hero,
