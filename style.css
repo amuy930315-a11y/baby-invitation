@@ -1,6 +1,6 @@
-/* =========================
+/* ========================================
    基本設定
-========================= */
+======================================== */
 
 * {
   box-sizing: border-box;
@@ -14,144 +14,171 @@ body {
   margin: 0;
 
   font-family:
-    "Microsoft JhengHei",
     "Noto Sans TC",
+    "Microsoft JhengHei",
     sans-serif;
 
-  color: #665f56;
+  color: #6f6a62;
 
-  background: #eeeeee;
+  text-align: center;
+
+  background-color: #d4e4e8;
+
+
+  /* ========================================
+     全網站｜分散小白圓點
+  ======================================== */
+
+  
+
+  /* 每顆使用不同高度
+     往下滑時不會排成一直線 */
+
+  background-size:
+    100% 820px,
+    100% 940px,
+    100% 770px,
+    100% 1080px,
+    100% 890px,
+    100% 990px,
+    100% 850px;
+
+
+  /* 左右、高低全部錯開 */
+
+  background-position:
+    9% 60px,
+    78% 150px,
+    38% 285px,
+    88% 420px,
+    14% 545px,
+    67% 675px,
+    31% 760px;
+
+
+  background-repeat: repeat-y;
 }
+
+
+/* ========================================
+   手機網站寬度
+======================================== */
+
 .hero,
 .event-section,
 .rsvp-section,
 footer {
   width: 100%;
   max-width: 430px;
+
   margin-left: auto;
   margin-right: auto;
+
+  /* 一定透明
+     才能看到 body 後面的圓點 */
+
+  background: transparent;
 }
 
 
-/* =========================
+/* ========================================
    首頁
-========================= */
+======================================== */
 
 .hero {
   min-height: 100vh;
 
-  background:
-    radial-gradient(circle at 12% 12%, #ffffff 0 11px, transparent 12px),
-    radial-gradient(circle at 32% 8%, #ffffff 0 8px, transparent 9px),
-    radial-gradient(circle at 68% 10%, #ffffff 0 13px, transparent 14px),
-    radial-gradient(circle at 88% 20%, #ffffff 0 9px, transparent 10px),
+  padding:
+    70px 22px
+    80px;
 
-    radial-gradient(circle at 10% 65%, #ffffff 0 12px, transparent 13px),
-    radial-gradient(circle at 30% 88%, #ffffff 0 8px, transparent 9px),
-    radial-gradient(circle at 70% 86%, #ffffff 0 11px, transparent 12px),
-    radial-gradient(circle at 89% 68%, #ffffff 0 9px, transparent 10px),
+  display: flex;
 
-    #d4e4e8;
+  flex-direction: column;
 
-  text-align: center;
-}
-.hero-inner {
-  width: 100%;
-  max-width: 520px;
+  justify-content: center;
 
-  position: relative;
-  z-index: 2;
+  align-items: center;
 }
 
 
-/* 小標 */
+/* 小標題 */
 
 .small-title {
-  margin: 0 0 18px;
+  margin:
+    0 0 18px;
 
   font-size: 11px;
-  letter-spacing: 6px;
 
-  color: #99866f;
+  letter-spacing: 5px;
+
+  color: #87999c;
 }
 
 
-/* 大標 */
+/* 首頁標題 */
 
 .hero h1 {
-  margin: 0;
+  margin: 0 0 20px;
 
   font-family:
-    "Microsoft JhengHei",
-    serif;
+  "DFKai-SB",
+  "標楷體",
+  cursive;
 
-  font-size: clamp(37px, 7vw, 58px);
-
+  font-size: 38px;
   font-weight: 400;
 
   letter-spacing: 5px;
 
-  color: #6f6458;
+  color: #6e6962;
 }
 
+/* 首頁介紹文字 */
 
-.subtitle {
-  margin: 18px 0 35px;
+.hero-text {
+  margin:
+    0 auto 35px;
 
   font-size: 13px;
 
-  letter-spacing: 3px;
+  line-height: 2.2;
 
-  color: #988571;
+  letter-spacing: 1px;
+
+  color: #807a72;
 }
 
 
-/* =========================
-   寶寶花瓣波浪照片
-========================= */
+/* ========================================
+   寶寶照片｜明顯不規則圓
+======================================== */
 
 .hero-photo {
-  width: 245px;
-  height: 245px;
+  width: 225px;
+  height: 225px;
 
-  margin: 0 auto 35px;
-  padding: 12px;
+  margin:
+    20px auto 35px;
 
-  background: white;
+  overflow: hidden;
 
-  /* 明顯花瓣波浪 */
+
+  /* 不規則波浪圓 */
+
   border-radius:
-    50% 45% 52% 44%
-    / 44% 52% 45% 50%;
+    38% 62% 42% 58% /
+    55% 38% 62% 45%;
+
+
+  border:
+    7px solid
+    rgba(255, 255, 255, 0.92);
+
 
   box-shadow:
-    0 10px 30px
-    rgba(140, 172, 183, 0.15);
-
-  transform: rotate(-3deg);
-}
-
-.hero-photo img {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-  object-fit: cover;
-
-  border-radius:
-    46% 54% 43% 57%
-    / 55% 43% 57% 45%;
-}
-
-.hero-photo img {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-  object-fit: cover;
-
-  /* 裡面的照片也是波浪形 */
-  clip-path: inherit;
+    0 12px 35px
+    rgba(75, 95, 100, 0.12);
 }
 
 
@@ -162,605 +189,163 @@ footer {
   display: block;
 
   object-fit: cover;
-
-  border-radius: 50%;
 }
 
 
-/* =========================
+/* ========================================
    日期
-========================= */
+======================================== */
 
 .date {
+  margin-top: 10px;
+
   display: flex;
+
   justify-content: center;
+
   align-items: center;
 
-  gap: 15px;
+  gap: 10px;
 
-  margin: 30px 0;
+  color: #726d66;
 }
 
 
 .date span {
-  font-size: 10px;
+  font-size: 12px;
 
   letter-spacing: 2px;
-
-  color: #998671;
 }
 
 
 .date strong {
-  padding: 0 18px;
+  padding:
+    0 12px;
 
-  font-family: Georgia, serif;
+  font-size: 19px;
 
-  font-size: 21px;
   font-weight: 400;
 
   letter-spacing: 2px;
 
   border-left:
-    1px solid rgba(105,90,70,0.25);
+    1px solid
+    rgba(110, 105, 98, 0.25);
 
   border-right:
-    1px solid rgba(105,90,70,0.25);
-
-  color: #6d6256;
+    1px solid
+    rgba(110, 105, 98, 0.25);
 }
 
 
-/* =========================
-   介紹文字
-========================= */
+/* ========================================
+   查看宴會資訊
+======================================== */
 
-.intro {
-  margin: 0 auto 35px;
-
-  font-size: 13px;
-
-  line-height: 2.1;
-
-  letter-spacing: 1px;
-
-  color: #857665;
-}
-
-
-/* =========================
-   主按鈕
-========================= */
-
-.main-button {
+.info-btn {
   display: inline-block;
 
-  padding: 15px 30px;
+  margin-top: 35px;
+  padding: 14px 30px;
 
-  border:
-    1px solid #927f67;
+  /* 白色圓框背景 */
+  background: #ffffff;
 
-  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
 
+  /* 文字 */
+  color: #71888d;
   text-decoration: none;
 
-  font-size: 11px;
+  font-size: 12px;
+  letter-spacing: 3px;
 
-  letter-spacing: 2px;
-
-  color: #766754;
-
-  transition: 0.25s;
-}
-
-
-.main-button:hover {
-  background: #766754;
-  color: white;
-}
-
-
-/* =========================
-   小花
-========================= */
-
-.tiny-flower {
-  position: absolute;
-
-  font-family: Georgia, serif;
-
-  color: rgba(142, 116, 87, 0.38);
-
-  z-index: 1;
-}
-
-
-.flower-a {
-  top: 11%;
-  left: 8%;
-
-  font-size: 35px;
-
-  transform: rotate(-20deg);
-}
-
-
-.flower-b {
-  top: 20%;
-  right: 9%;
-
-  font-size: 24px;
-}
-
-
-.flower-c {
-  bottom: 12%;
-  left: 10%;
-
-  font-size: 27px;
-}
-
-
-.flower-d {
-  bottom: 17%;
-  right: 7%;
-
-  font-size: 37px;
-
-  transform: rotate(20deg);
-}
-
-
-/* =========================
-   共用區域
-========================= */
-
-.event-section,
-.rsvp-section {
-  padding: 100px 22px;
-
-  text-align: center;
-}
-
-
-.section-label {
-  margin: 0 0 14px;
-
-  font-size: 10px;
-
-  letter-spacing: 5px;
-
-  color: #a18e77;
-}
-
-
-.event-section h2,
-.rsvp-section h2 {
-  margin: 0 0 40px;
-
-  font-size: 30px;
-
-  font-weight: 400;
-
-  letter-spacing: 4px;
-
-  color: #716659;
-}
-
-
-/* =========================
-   宴會
-========================= */
-
-.event-section {
-  background: #fffdf8;
-}
-
-
-.event-card {
-  width: 100%;
-  max-width: 520px;
-
-  margin: auto;
-
-  padding: 25px 38px;
-
-  border:
-    1px solid #e7dccb;
-
-  background: #fffaf1;
-}
-
-
-.event-row {
-  padding: 25px 5px;
-
-  border-bottom:
-    1px solid #e7ddce;
-}
-
-
-.event-row:last-child {
-  border-bottom: none;
-}
-
-
-.event-row span {
-  display: block;
-
-  margin-bottom: 9px;
-
-  font-size: 10px;
-
-  letter-spacing: 4px;
-
-  color: #a18e76;
-}
-
-
-.event-row p {
-  margin: 0;
-
-  font-size: 16px;
-
-  letter-spacing: 2px;
-
-  color: #675e54;
-}
-
-
-/* =========================
-   RSVP
-========================= */
-
-.rsvp-section {
-  background: #f7e8bd;
-}
-
-
-.rsvp-description {
-  margin: -20px auto 40px;
-
-  font-size: 13px;
-
-  line-height: 2;
-
-  color: #897866;
-}
-
-
-.rsvp-card {
-  width: 100%;
-  max-width: 520px;
-
-  margin: auto;
-
-  padding: 45px 38px;
-
-  background:
-    rgba(255,255,255,0.72);
-
+  /* 淡淡陰影 */
   box-shadow:
-    0 15px 50px
-    rgba(100,80,55,0.08);
-}
-
-
-/* =========================
-   表單
-========================= */
-
-.form-group {
-  margin-bottom: 30px;
-
-  text-align: left;
-}
-
-
-.form-group > label {
-  display: block;
-
-  margin-bottom: 11px;
-
-  font-size: 12px;
-
-  letter-spacing: 2px;
-
-  color: #766b5e;
-}
-
-
-.form-group input[type="text"],
-.form-group input[type="number"] {
-  width: 100%;
-
-  padding: 14px 5px;
-
-  border: none;
-
-  border-bottom:
-    1px solid #cdbfae;
-
-  outline: none;
-
-  background: transparent;
-
-  font-size: 15px;
-
-  color: #665d53;
-}
-
-
-/* =========================
-   參與按鈕
-========================= */
-
-.attendance {
-  display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap: 12px;
-}
-
-
-.attendance input {
-  position: absolute;
-  opacity: 0;
-}
-
-
-.attendance label {
-  padding: 15px 10px;
-
-  border:
-    1px solid #cdbda8;
-
-  border-radius: 100px;
-
-  text-align: center;
-
-  cursor: pointer;
-
-  transition: 0.25s;
-}
-
-
-.attendance input:checked + label {
-  background: #89745e;
-
-  border-color: #89745e;
-
-  color: white;
-}
-
-
-/* 人數 */
-
-.guest-fields {
-  display: none;
-}
-
-
-/* =========================
-   送出
-========================= */
-
-.submit-btn {
-  width: 100%;
-
-  padding: 17px;
-
-  border: none;
-
-  border-radius: 100px;
-
-  background: #89745e;
-
-  color: white;
-
-  font-size: 12px;
-
-  letter-spacing: 3px;
+    0 8px 22px rgba(80, 105, 115, 0.10);
 
   cursor: pointer;
 }
 
 
-.submit-btn:hover {
-  background: #705d4c;
-}
-
-
-/* =========================
-   成功
-========================= */
-
-.success {
-  display: none;
-
-  padding-top: 35px;
-
-  text-align: center;
-}
-
-
-.success-heart {
-  font-size: 27px;
-}
-
-
-.success h3 {
-  margin: 12px 0;
-
-  font-size: 20px;
-
-  font-weight: 400;
-
-  letter-spacing: 2px;
-}
-
-
-.success p {
-  font-size: 12px;
-
-  line-height: 2;
-
-  color: #837666;
-}
-
-
-/* =========================
-   Footer
-========================= */
-
-footer {
-  padding: 60px 20px;
-
-  text-align: center;
-
-  background: #756553;
-
-  color: #fffaf2;
-}
-
-
-footer p {
-  margin: 0 0 10px;
-
-  font-size: 14px;
-
-  letter-spacing: 3px;
-}
-
-
-footer span {
-  font-size: 9px;
-
-  letter-spacing: 4px;
-
-  opacity: 0.7;
-}
-
-
-/* =========================
-   手機
-========================= */
-
-@media (max-width: 600px) {
-
-  .hero {
-    padding:
-      65px 20px;
-  }
-
-  .hero h1 {
-    font-size: 38px;
-
-    letter-spacing: 3px;
-  }
-
-  .hero-photo {
-    width: 210px;
-    height: 210px;
-  }
-
-  .date {
-    gap: 9px;
-  }
-
-  .date strong {
-    padding: 0 11px;
-
-    font-size: 18px;
-  }
-
-  .event-section,
-  .rsvp-section {
-    padding:
-      80px 20px;
-  }
-
-  .event-section h2,
-  .rsvp-section h2 {
-    font-size: 25px;
-  }
-
-  .event-card {
-    padding:
-      20px;
-  }
-
-  .rsvp-card {
-    padding:
-      38px 22px;
-  }
-
-}
-/* =========================
+/* ========================================
    宴會資訊
-========================= */
+======================================== */
 
 .event-section {
-  width: 100%;
-  max-width: 430px;
-  margin: 0 auto;
-
-  padding: 75px 24px;
-
-  background: #f8f6f1;
-
-  text-align: center;
+  padding:
+    85px 24px;
 }
+
 
 .section-label {
-  margin: 0 0 15px;
+  margin:
+    0 0 15px;
 
   font-size: 11px;
+
   letter-spacing: 4px;
 
-  color: #9a9288;
+  color: #879da2;
 }
+
 
 .event-section h2,
 .rsvp-section h2 {
-  margin: 0 0 35px;
+  margin:
+    0 0 35px;
 
   font-size: 25px;
+
   font-weight: 400;
 
   letter-spacing: 3px;
 
-  color: #6f6a62;
+  color: #696b68;
 }
 
 
-/* 宴會卡片 */
+/* ========================================
+   宴會資訊白卡
+======================================== */
 
 .event-card {
-  width: 100%;
+  width: 92%;
 
-  padding: 15px 25px;
+  max-width: 360px;
 
-  background: white;
+  margin:
+    0 auto;
+
+  padding:
+    20px 28px;
+
+  background:
+    rgba(255, 255, 255, 0.94);
 
   border-radius: 25px;
 
   box-shadow:
-    0 10px 35px rgba(80, 80, 70, 0.07);
+    0 10px 30px
+    rgba(80, 105, 115, 0.08);
 }
+
 
 .event-row {
-  padding: 22px 5px;
+  padding:
+    24px 8px;
 
   border-bottom:
-    1px solid #ebe7df;
+    1px solid
+    rgba(120, 140, 145, 0.18);
 }
+
 
 .event-row:last-child {
   border-bottom: none;
 }
+
 
 .event-row span {
   display: block;
@@ -768,64 +353,77 @@ footer span {
   margin-bottom: 8px;
 
   font-size: 11px;
-  letter-spacing: 3px;
 
-  color: #aaa298;
+  letter-spacing: 4px;
+
+  color: #8da2a7;
 }
+
 
 .event-row p {
   margin: 0;
 
   font-size: 15px;
+
+  line-height: 1.7;
+
   letter-spacing: 1px;
 
-  color: #716b63;
+  color: #686b69;
 }
 
 
-/* =========================
+/* ========================================
    出席回覆
-========================= */
+======================================== */
 
 .rsvp-section {
-  width: 100%;
-  max-width: 430px;
-  margin: 0 auto;
-
-  padding: 75px 24px;
-
-  background: #d4e4e8;
-
-  text-align: center;
+  padding:
+    85px 24px;
 }
 
+
 .rsvp-description {
-  margin: -15px auto 35px;
+  margin:
+    -15px auto 35px;
 
   font-size: 13px;
+
   line-height: 2;
 
   color: #807a72;
 }
 
 
-/* 表單白色卡片 */
+/* ========================================
+   RSVP 白色卡片
+======================================== */
 
 .rsvp-card {
-  width: 100%;
+  width: 92%;
 
-  padding: 35px 25px;
+  max-width: 360px;
 
-  background: rgba(255, 255, 255, 0.92);
+  margin:
+    0 auto;
+
+  padding:
+    38px 25px;
+
+  background:
+    rgba(255, 255, 255, 0.94);
 
   border-radius: 25px;
 
   box-shadow:
-    0 10px 35px rgba(70, 90, 95, 0.08);
+    0 10px 35px
+    rgba(70, 90, 95, 0.08);
 }
 
 
-/* 每一題 */
+/* ========================================
+   表單
+======================================== */
 
 .form-group {
   margin-bottom: 28px;
@@ -833,12 +431,14 @@ footer span {
   text-align: left;
 }
 
+
 .form-group > label {
   display: block;
 
   margin-bottom: 10px;
 
   font-size: 12px;
+
   letter-spacing: 2px;
 
   color: #716d67;
@@ -851,7 +451,8 @@ footer span {
 .form-group input[type="number"] {
   width: 100%;
 
-  padding: 13px 5px;
+  padding:
+    13px 5px;
 
   border: none;
 
@@ -863,10 +464,14 @@ footer span {
   background: transparent;
 
   font-size: 15px;
+
+  color: #686b69;
 }
 
 
-/* 參與 / 不參與 */
+/* ========================================
+   參與 / 不參與
+======================================== */
 
 .attendance {
   display: grid;
@@ -877,14 +482,17 @@ footer span {
   gap: 12px;
 }
 
+
 .attendance input {
   position: absolute;
 
   opacity: 0;
 }
 
+
 .attendance label {
-  padding: 14px 8px;
+  padding:
+    14px 8px;
 
   border:
     1px solid #b9c8cb;
@@ -896,25 +504,33 @@ footer span {
   cursor: pointer;
 
   color: #716d67;
+
+  background:
+    rgba(255, 255, 255, 0.5);
 }
+
 
 .attendance input:checked + label {
   background: #91abb1;
 
   border-color: #91abb1;
 
-  color: white;
+  color: #ffffff;
 }
 
 
-/* 出席人數 */
+/* ========================================
+   出席人數
+======================================== */
 
 .guest-fields {
   display: none;
 }
 
 
-/* 送出 */
+/* ========================================
+   送出按鈕
+======================================== */
 
 .submit-btn {
   width: 100%;
@@ -922,50 +538,110 @@ footer span {
   padding: 16px;
 
   border: none;
+
   border-radius: 50px;
 
   background: #91abb1;
 
-  color: white;
+  color: #ffffff;
 
   font-size: 12px;
+
   letter-spacing: 3px;
 
   cursor: pointer;
 }
 
 
-/* =========================
-   RSVP 完成畫面
-========================= */
+.submit-btn:disabled {
+  opacity: 0.65;
+
+  cursor: default;
+}
+
+
+/* ========================================
+   回覆成功畫面
+======================================== */
 
 .success {
   display: none;
 
-  min-height: 70vh;
   width: 100%;
 
-  padding: 60px 25px;
+  min-height: 75vh;
+
+  padding:
+    60px 25px;
 
   flex-direction: column;
+
   justify-content: center;
+
   align-items: center;
 
   text-align: center;
+
+  background: transparent;
 }
 
-.success-heart {
-  margin-bottom: 20px;
 
-  font-size: 42px;
+/* ========================================
+   成功頁寶寶照片
+======================================== */
+
+.success-photo {
+  width: 180px;
+  height: 180px;
+
+  margin:
+    0 auto 25px;
+
+  overflow: hidden;
+
+  border-radius:
+    40% 60% 45% 55% /
+    57% 42% 58% 43%;
+
+  border:
+    6px solid
+    rgba(255, 255, 255, 0.92);
+
+  box-shadow:
+    0 10px 30px
+    rgba(75, 95, 100, 0.10);
+}
+
+
+.success-photo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* 愛心 */
+
+.success-heart {
+  margin-bottom: 18px;
+
+  font-size: 36px;
 
   color: #91abb1;
 }
 
-.success h3 {
-  margin: 0 0 20px;
 
-  font-size: 25px;
+/* 成功標題 */
+
+.success h3 {
+  margin:
+    0 0 20px;
+
+  font-size: 24px;
+
   font-weight: 400;
 
   letter-spacing: 4px;
@@ -973,10 +649,14 @@ footer span {
   color: #696b68;
 }
 
+
+/* 成功文字 */
+
 .success p {
   margin: 0;
 
   font-size: 13px;
+
   line-height: 2.2;
 
   letter-spacing: 1px;
@@ -984,154 +664,304 @@ footer span {
   color: #817d76;
 }
 
+
 .success-small {
   display: block;
 
-  margin-top: 30px;
+  margin-top: 28px;
 
   font-size: 10px;
+
+  line-height: 2;
+
   letter-spacing: 2px;
 
-  color: #9b9993;
+  color: #92908a;
 }
 
-/* =========================
+
+/* ========================================
    最下面
-========================= */
+======================================== */
 
 footer {
-  width: 100%;
-  max-width: 430px;
+  padding:
+    55px 20px
+    65px;
 
-  margin: 0 auto;
-
-  padding: 50px 20px;
+  color: #77736d;
 
   text-align: center;
 
-  background: #eef3f2;
-
-  color: #77736d;
+  background: transparent;
 }
+
 
 footer p {
-  margin: 0 0 8px;
+  margin:
+    0 0 8px;
 
   font-size: 13px;
+
   letter-spacing: 3px;
 }
+
 
 footer span {
   font-size: 10px;
+
   letter-spacing: 3px;
+
+  opacity: 0.75;
+}
+
+
+/* ========================================
+   小尺寸手機
+======================================== */
+
+@media (max-width: 380px) {
+
+  .hero {
+    padding:
+      60px 18px
+      70px;
+  }
+
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+
+  .hero-photo {
+    width: 200px;
+    height: 200px;
+  }
+
+
+  .event-section,
+  .rsvp-section {
+    padding:
+      75px 18px;
+  }
+
+
+  .event-card,
+  .rsvp-card {
+    width: 96%;
+  }
+
 }
 /* =========================
-   全網站統一背景
+   散落白色圓點
 ========================= */
 
-body,
+body {
+  position: relative;
+  margin: 0;
+  background: #d4e4e8;
+}
+
+
+/* 圓點背景層 */
+
+.dots-bg {
+  position: fixed;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 100%;
+  max-width: 430px;
+  height: 100vh;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+/* 每一顆圓點 */
+
+.dot {
+  position: absolute;
+
+  display: block;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border-radius: 50%;
+}
+
+
+/* 7 顆故意亂放 */
+
+.dot-1 {
+  width: 20px;
+  height: 20px;
+
+  top: 7%;
+  left: 8%;
+}
+
+
+.dot-2 {
+  width: 15px;
+  height: 15px;
+
+  top: 16%;
+  right: 13%;
+}
+
+
+.dot-3 {
+  width: 22px;
+  height: 22px;
+
+  top: 31%;
+  left: 24%;
+}
+
+
+.dot-4 {
+  width: 14px;
+  height: 14px;
+
+  top: 43%;
+  right: 7%;
+}
+
+
+.dot-5 {
+  width: 18px;
+  height: 18px;
+
+  top: 59%;
+  left: 9%;
+}
+
+
+.dot-6 {
+  width: 16px;
+  height: 16px;
+
+  top: 73%;
+  right: 25%;
+}
+
+
+.dot-7 {
+  width: 21px;
+  height: 21px;
+
+  top: 89%;
+  left: 39%;
+}
+
+
+/* 網站內容在圓點上面 */
+
 .hero,
 .event-section,
 .rsvp-section,
 footer {
-  background-color: #d4e4e8;
+  position: relative;
+
+  z-index: 1;
+
+  background: transparent;
 }
-/* 宴會資訊｜原本簡約卡片 */
+body,
+button,
+input,
+textarea,
+select {
+  font-family:
+    "DFKai-SB",
+    "標楷體",
+    cursive;
+}
+/* =========================
+   宴會資訊｜長圓形字卡
+========================= */
 
 .event-card {
-  width: 92%;
-  max-width: 360px;
+  width: 88%;
+  max-width: 520px;
 
-  margin: 0 auto;
-  padding: 25px 28px;
+  margin: 35px auto 0;
+  padding: 35px 45px;
 
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.88);
 
-  border: none;
-  border-radius: 25px;
+  border: 1px solid rgba(120, 145, 150, 0.16);
+  border-radius: 60px;
 
   box-shadow:
-    0 10px 30px rgba(80, 105, 115, 0.08);
-
-  transform: none;
+    0 12px 35px rgba(90, 110, 115, 0.10);
 }
 
+
+/* 日期、時間、地點、地址 */
+
 .event-row {
-  padding: 24px 8px;
+  display: flex;
+  align-items: center;
+
+  padding: 15px 0;
 
   border-bottom:
-    1px solid rgba(120, 140, 145, 0.18);
-
-  transform: none;
+    1px solid rgba(120, 145, 150, 0.12);
 }
 
 .event-row:last-child {
   border-bottom: none;
 }
 
+
+/* 左邊小標題 */
+
 .event-row span {
-  display: block;
+  width: 80px;
 
-  margin-bottom: 8px;
+  font-size: 12px;
+  letter-spacing: 3px;
 
-  font-size: 11px;
-  letter-spacing: 4px;
-
-  color: #8da2a7;
-
-  text-align: center;
+  color: #789095;
 }
+
+
+/* 右邊內容 */
 
 .event-row p {
   margin: 0;
 
-  font-size: 15px;
-  line-height: 1.7;
+  flex: 1;
 
+  font-size: 13px;
   letter-spacing: 1px;
 
-  color: #686b69;
-
-  text-align: center;
-}
-/* =========================
-   全網站｜淡藍＋白色圓點背景
-========================= */
-
-body {
-  margin: 0;
-
-  background-color: #d4e4e8;
-
-  background-image:
-    radial-gradient(circle, #fff 0 11px, transparent 12px),
-    radial-gradient(circle, #fff 0 8px, transparent 9px),
-    radial-gradient(circle, #fff 0 10px, transparent 11px),
-    radial-gradient(circle, #fff 0 7px, transparent 8px),
-    radial-gradient(circle, #fff 0 9px, transparent 10px);
-
-  /* 一個手機畫面約 5 顆 */
-  background-size:
-    100% 750px,
-    100% 750px,
-    100% 750px,
-    100% 750px,
-    100% 750px;
-
-  /* 往裡面移，避免只露半顆 */
-  background-position:
-    10% 70px,
-    86% 170px,
-    15% 360px,
-    82% 520px,
-    48% 680px;
-
-  background-repeat: repeat-y;
+  color: #5f7074;
 }
 
-.hero,
-.event-section,
-.rsvp-section,
-footer {
-  background: transparent;
+
+/* 手機版 */
+
+@media (max-width: 600px) {
+
+  .event-card {
+    width: 84%;
+
+    padding: 28px 30px;
+
+    border-radius: 45px;
+  }
+
+  .event-row span {
+    width: 65px;
+  }
+
 }
