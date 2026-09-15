@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>寶寶滿月宴｜電子邀請函</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       首頁
+  ========================== -->
+
+  <section class="hero">
+
+    <div class="hero-inner">
+
+      <p class="small-title">
+        誠摯邀請
+      </p>
+
+      <h1>
+        寶寶滿月啦 ♡
+      </h1>
+
+      <p class="subtitle">
+        一起來分享我們的小小幸福
+      </p>
+
+
+      <!-- 圓形寶寶照片 -->
+
+      <div class="hero-photo">
+        <img
+          src="images/baby.jpg"
+          alt="寶寶照片"
+        >
+      </div>
+
+
+      <div class="date">
+
+        <span>2026</span>
+
+        <strong>
+          11 · 08
+        </strong>
+
+        <span>星期日</span>
+
+      </div>
+
+
+      <p class="intro">
+        小小的生命來到我們身邊，<br>
+        為日子增添了好多溫柔與幸福。<br><br>
+
+        在寶寶滿月的這一天，<br>
+        想邀請重要的你們一起來吃頓飯 ♡
+      </p>
+
+
+      <a
+        href="#event"
+        class="main-button"
+      >
+        查看宴會資訊 ↓
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       宴會資訊
+  ========================== -->
+
+  <section
+    class="event-section"
+    id="event"
+  >
+
+    <p class="section-label">
+      滿月宴
+    </p>
+
+    <h2>
+      誠摯邀請您的到來
+    </h2>
+
+
+    <div class="event-card">
+
+
+      <div class="event-row">
+
+        <span>日期</span>
+
+        <p>
+          2026 年 11 月 8 日
+        </p>
+
+      </div>
+
+
+      <div class="event-row">
+
+        <span>時間</span>
+
+        <p>
+          中午 12：00
+        </p>
+
+      </div>
+
+
+      <div class="event-row">
+
+        <span>地點</span>
+
+        <p>
+          幸福花園宴會館
+        </p>
+
+      </div>
+
+
+      <div class="event-row">
+
+        <span>地址</span>
+
+        <p>
+          桃園市○○區○○路 100 號
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       RSVP
+  ========================== -->
+
+  <section class="rsvp-section">
+
+    <p class="section-label">
+      出席回覆
+    </p>
+
+    <h2>
+      您會來參加嗎？♡
+    </h2>
+
+    <p class="rsvp-description">
+      為方便準備座位與餐點，<br>
+      麻煩您留下出席資訊。
+    </p>
+
+
+    <form
+      id="rsvpForm"
+      class="rsvp-card"
+    >
+
+
+      <!-- 姓名 -->
+
+      <div class="form-group">
+
+        <label for="guestName">
+          您的姓名
+        </label>
+
+        <input
+          id="guestName"
+          name="guestName"
+          type="text"
+          placeholder="請輸入姓名"
+          required
+        >
+
+      </div>
+
+
+      <!-- 是否參加 -->
+
+      <div class="form-group">
+
+        <label>
+          是否參與滿月宴？
+        </label>
+
+
+        <div class="attendance">
+
+
+          <input
+            type="radio"
+            id="yes"
+            name="attendance"
+            value="參與"
+            required
+          >
+
+          <label for="yes">
+             參與
+          </label>
+
+
+          <input
+            type="radio"
+            id="no"
+            name="attendance"
+            value="不參與"
+          >
+
+          <label for="no">
+            不參與
+          </label>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- 參與才顯示 -->
+
+      <div
+        id="guestFields"
+        class="guest-fields"
+      >
+
+        <div class="form-group">
+
+          <label for="guestCount">
+            出席人數
+          </label>
+
+          <input
+            id="guestCount"
+            name="guestCount"
+            type="number"
+            min="1"
+            max="20"
+            value="1"
+          >
+
+        </div>
+
+      </div>
+
+
+      <button
+        class="submit-btn"
+        type="submit"
+      >
+        送出
+      </button>
+
+</form>
+      <!-- =========================
+     回覆成功畫面
+========================= -->
+
+<div class="success" id="successMessage">
+
+  <div class="success-heart">
+    ♡
+  </div>
+
+  <h3>
+    已收到您的回覆
+  </h3>
+
+  <p>
+    謝謝您撥空填寫
+    <br><br>
+    期待在寶寶滿月宴與您相見 ♡
+  </p>
+
+  <span class="success-small">
+    這份小小的幸福，
+    <br>
+    期待與您一起分享
+  </span>
+
+</div>
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <p>
+      期待與您相見 ♡
+    </p>
+
+    <span>
+      寶寶滿月宴
+    </span>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
